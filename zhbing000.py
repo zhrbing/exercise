@@ -141,7 +141,7 @@
 #
 # print(abs_my('a'))
 
-import math
+# import math
 # def move(x, y, step, angle=0):
 #     nx = x + step * math.cos(angle)
 #     ny = y - step * math.sin(angle)
@@ -227,17 +227,16 @@ import math
 # print(fact(10))
 # print(fact(1000))
 
-# def fib(n):
-#     a,b=1,1
-#     num=1
-#     while a<n:
-#         print('%10d' % a, end='\t')
-#         a,b=b,a+b
-#         if num % 5 ==0:
-#             print()
-#         num=num+1
-#
-# fib(100000)
+def fib(max):
+    n, a, b = 1, 1, 1
+    while n <= max:
+        print('%5d' % a, end='\t')
+        a, b = b, a + b
+        if n % 5 == 0:
+            print()
+        n = n + 1
+
+fib(15)
 
 # def ask_ok(prompt,retries=4,reminder="Please try again!"):
 #     while True:
@@ -301,22 +300,14 @@ import math
 # print([x*x for x in range(1,11) if x%2==0])
 # print([x+y for x in 'ABC' for y in 'def'])
 
-# l=['Hello','World',18,'Apple',None]
-# l0=[]
+# l = ['Hello', 'World', 18, 'Apple', None]
+# l0 = []
 # for lv in l:
-#     if isinstance(lv,str):
+#     if isinstance(lv, str):
 #         l0.append(lv.upper())
 # print(l0)
 
-print([x.upper() for x in ['Hello',16,'World',18,'Apple',None] if isinstance(x,str)])
-
-
-
-
-
-
-
-
+# print([x.upper() for x in ['Hello', 16, 'World', 18, 'Apple', None] if isinstance(x, str)])
 
 
 
