@@ -44,7 +44,7 @@ for i in triangle_yang():
     if n==10:
         break
 ####################################################
-
+print([x*x for x in range(20)])
 
 
 
