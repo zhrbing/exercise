@@ -85,11 +85,11 @@ from functools import reduce
 # l=list(filter(is_odd,[1,2,3,4,5,6,7,8,9]))
 # print(l)
 
-l=[21,-10,35,-6,-77,9]
-print(sorted(l,key=abs))
-
-l0=['apple','Microsoft','google','IBM','Nokia']
-print(sorted(l0,key=str.lower,reverse=True))
+# l=[21,-10,35,-6,-77,9]
+# print(sorted(l,key=abs))
+#
+# l0=['apple','Microsoft','google','IBM','Nokia']
+# print(sorted(l0,key=str.lower,reverse=True))
 
 
 
