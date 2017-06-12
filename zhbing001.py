@@ -91,7 +91,17 @@ from functools import reduce
 # l0=['apple','Microsoft','google','IBM','Nokia']
 # print(sorted(l0,key=str.lower,reverse=True))
 
+def lazy_sum(*args):
+    def sum():
+        ax=0
+        for n in args:
+            ax+=n
+        return ax
+    return sum
 
+f=lazy_sum(1,2,3,4,5)
+print(f)
+print(f())
 
 
 
