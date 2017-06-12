@@ -51,8 +51,6 @@
 # print(isinstance((),Iterator))
 # print(isinstance(iter(()),Iterator))
 # print(isinstance((x*x for x in range(10)),Iterator))
-print([x*x for x in range(20)])
-
 
 # def f00(x,y,f):
 #     print(f(x)+f(y))
