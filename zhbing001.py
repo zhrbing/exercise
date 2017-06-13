@@ -136,16 +136,59 @@ from functools import reduce
 # print(build(3,4)())
 
 #装饰器
-def log(func):
-    def wrapper(*args,**kw):
-        print('call %s函数:' % func.__name__)
-        return func(*args,*kw)
-    return wrapper
+# def log(func):
+#     def wrapper(*args,**kw):
+#         print('call %s函数:' % func.__name__)
+#         return func(*args,*kw)
+#     return wrapper
+#
+# @log
+# def now():
+#     print('2017-06-13')
+#
+# now()
 
-@log
-def now():
-    print('2017-06-13')
+# def log(text):
+#     def decorator(func):
+#         def wrapper(*args,**kw):
+#             print('%s %s():' % (text,func.__name__))
+#             return func(*args,**kw)
+#         return wrapper
+#     return decorator
+#
+# @log('执行')
+# def now():
+#     print('20170613')
+#
+# now()
 
-now()
+#偏函数
+# print(int('15',base=8))
+#
+# def int2(x,base=2):
+#     return int(x,base)
+#
+# print(int2('110'))
+
+# import functools
+# int2=functools.partial(int,base=2)
+# print(int2('1111'))
+# print(int2('1111',base=10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
