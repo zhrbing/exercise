@@ -84,13 +84,44 @@
 # f(Timer())
 ###########################################################################
 #判断对象类型
-class Myc(object):
-    pass
+# class Myc(object):
+#     pass
+#
+# print(type(123))
+# print(type('abc'))
+# print(type(abs))
+# print(Myc())
+# print(type(None))
+#
+# #type()函数返回类型--对应的Class类型
+# print(type(123)==int)
 
-print(type(123))
-print(type('abc'))
-print(type(abs))
-print(Myc())
+# import types
+# def f():
+#     pass
+#
+# print(type(f)==types.FunctionType)
+# print(type(abs)==types.BuiltinFunctionType)
+# print((type(lambda x:x)==types.LambdaType))
+# print(type((x for x in range(10)))==types.GeneratorType)
+
+print(isinstance(b'a',bytes))
+print(isinstance([1,2,3],(list,tuple)))#判断变量是否某类型中的一种
+###########################################################################
+print(dir('abc'))#以list形式返回一个对象的所有属性和方法
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
