@@ -256,6 +256,20 @@
 # print(s.age)
 
 
+class GrandFather():
+    def run_Grand(self):
+        print('GrandFather run...')
+
+class Father(GrandFather):
+    def run_father(self):
+        print('Father run...')
+
+class son(Father):
+    pass
+
+testson=son()
+testson.run_father()
+testson.run_Grand()
 
 
 
