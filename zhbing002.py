@@ -256,23 +256,30 @@
 # print(s.age)
 
 
-class GrandFather():
-    def run_Grand(self):
-        print('GrandFather run...')
-
-class Father(GrandFather):
-    def run_father(self):
-        print('Father run...')
-
-class son(Father):
-    pass
-
-testson=son()
-testson.run_father()
-testson.run_Grand()
+# class GrandFather():
+#     def run_Grand(self):
+#         print('GrandFather run...')
+#
+# class Father(GrandFather):
+#     def run_father(self):
+#         print('Father run...')
+#
+# class son(Father):
+#     pass
+#
+# testson=son()
+# testson.run_father()
+# testson.run_Grand()
 
 ############
 
+# list_arr=[8,2,1,0,3]
+# list_index=[2,0,3,2,4,0,1,3,2,3,3]
+# list_tel=''
+# for i in list_index:
+#     list_tel+=str(list_arr[i])
+#
+# print(list_tel)
 
 
 
