@@ -271,7 +271,7 @@
 # testson.run_father()
 # testson.run_Grand()
 
-############
+################################################
 
 # list_arr=[8,2,1,0,3]
 # list_index=[2,0,3,2,4,0,1,3,2,3,3]
@@ -281,11 +281,37 @@
 #
 # print(list_tel)
 
-
-
-
-
-
+################################################
+#__str__
+# class Student(object):
+#     def __init__(self,name):
+#         self.name=name
+#
+#     def __str__(self):
+#         return 'Student object(name:%s)' % self.name
+#
+#     __repr__=__str__
+#
+# stu=Student('Mike')
+# print(stu)
+################################################
+#__iter__
+# class Fib(object):
+#     def __init__(self):
+#         self.a,self.b=0,1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.a,self.b=self.b,self.a+self.b
+#         if self.a>10000:
+#             raise StopIteration()
+#         return self.a
+#
+# for n in Fib():
+#     print(n)
+################################################
 
 
 
