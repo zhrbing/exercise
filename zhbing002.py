@@ -312,7 +312,40 @@
 # for n in Fib():
 #     print(n)
 ################################################
+#getitem
+# class Fib(object):
+#     def __getitem__(self, item):
+#         a,b=1,1
+#         for x in range(item):
+#             a,b=b,a+b
+#         return a
+#
+# print(Fib()[100])
+# for x in range(20):
+#     print('Fib('+str(x+1)+')=',Fib()[x])
 
+class Fib(object):
+    def __getitem__(self, item):
+        if isinstance(item,int):     #item是索引
+            a,b=1,1
+            for x in range(item):
+                a,b=b,a+b
+            return a
+        if isinstance(item,slice):    #item是切片
+            start=item.start
+            stop=item.stop
+            if start is None:
+                start=0
+            a,b=1,1
+            L=[]
+            for x in range(stop):
+                if x>=start:
+                    L.append(a)
+                a,b=b,a+b
+            return L
+
+print(Fib()[10])
+print(Fib()[:10])
 
 
 
