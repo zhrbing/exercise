@@ -324,28 +324,96 @@
 # for x in range(20):
 #     print('Fib('+str(x+1)+')=',Fib()[x])
 
-class Fib(object):
-    def __getitem__(self, item):
-        if isinstance(item,int):     #item是索引
-            a,b=1,1
-            for x in range(item):
-                a,b=b,a+b
-            return a
-        if isinstance(item,slice):    #item是切片
-            start=item.start
-            stop=item.stop
-            if start is None:
-                start=0
-            a,b=1,1
-            L=[]
-            for x in range(stop):
-                if x>=start:
-                    L.append(a)
-                a,b=b,a+b
-            return L
+# class Fib(object):
+#     def __getitem__(self, item):
+#         if isinstance(item,int):     #item是索引
+#             a,b=1,1
+#             for x in range(item):
+#                 a,b=b,a+b
+#             return a
+#         if isinstance(item,slice):    #item是切片
+#             start=item.start
+#             stop=item.stop
+#             if start is None:
+#                 start=0
+#             a,b=1,1
+#             L=[]
+#             for x in range(stop):
+#                 if x>=start:
+#                     L.append(a)
+#                 a,b=b,a+b
+#             return L
+#
+# print(Fib()[10])
+# print(Fib()[:10])
+################################################
+#__getattr__
+# class Chain(object):
+#     def __init__(self,path=''):
+#         self._path=path
+#
+#     def __getattr__(self, path):
+#         return Chain('%s/%s' % (self._path,path))
+#
+#     def __str__(self):
+#         return self._path
+#
+#     __repr__=__str__
+#
+# print(Chain().status.user.timeline.list)
+################################################
+#定义__call__()方法，直接对实例进行调用:把对象看成函数
+# class Student(object):
+#     def __init__(self,name):
+#         self.name=name
+#
+#     def __call__(self):
+#         print('My name is %s.' % self.name)
+#
+# Student('Mike')()
+#
+# #callable()：判断一个对象是否“可调用”
+# print(callable(Student('')))
+# print(callable(max))
+# print(callable('str'))
+################################################
+#使用枚举类
+# from enum import Enum
+# Month=Enum('Month',('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
+# for name,member in Month.__members__.items():
+#     print(name,'——>',member,',',member.value)
 
-print(Fib()[10])
-print(Fib()[:10])
+# from enum import Enum,unique
+# @unique    #保证没有重复值
+# class Weekday(Enum):
+#     Sun=0
+#     Mon=1
+#     Tue=2
+#     Wed=3
+#     Thu=4
+#     Fri=5
+#     Sat=6
+#
+# print(Weekday.Thu.value)
+# print(Weekday(1))
+# for name,member in Weekday.__members__.items():
+#     print(name,'——>',member,'——>',member.value)
+################################################
+from hello import Hello
+h=Hello()
+h.hello()
+print(type(Hello))
+print(type(h))
+print(type(123))
+print(type([1,2]))
+
+
+
+
+
+
+
+
 
 
 
