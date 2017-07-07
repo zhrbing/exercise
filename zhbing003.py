@@ -109,3 +109,36 @@
 # with open('/home/zhbing/桌面/111','w') as f:
 #     f.write('\nHello world3.\n')
 ################################################
+#StringIO
+# from io import StringIO
+# f=StringIO()
+# print(f.write('hello'))
+# print(f.getvalue())       #getvalue()获得写入后的str
+
+# from io import StringIO
+# f=StringIO('Hello,\nHi,\nGoodbye!')    #初始化StringIO
+# while True:
+#     s=f.readline()
+#     if s=='':
+#         break
+#     print(s.strip())
+################################################
+#BytesIO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
