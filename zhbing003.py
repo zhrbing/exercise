@@ -107,5 +107,5 @@
 #         print(line.strip())     #去掉末尾的\n
 
 # with open('/home/zhbing/桌面/111','w') as f:
-#     f.write('Hello world.\n\nhello')
+#     f.write('\nHello world3.\n')
 ################################################
