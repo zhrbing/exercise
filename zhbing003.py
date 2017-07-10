@@ -139,13 +139,13 @@ import os
 # print(os.uname())   #获取系统信息
 # print(os.environ)   #环境变量
 # print(os.environ.get('HOME'))   #os.environ.get('key')获取某个环境变量的值
-print(os.path.abspath('.'))    # 查看当前目录的绝对路径
+# print(os.path.abspath('.'))    # 查看当前目录的绝对路径
 
-
-
-
-
-
+# print(os.path.join('/home/zhbing','testdir'))  #在某个目录下创建一个新目录，首先把新目录的完整路径表示出来:
+# os.mkdir('/home/zhbing/testdir')  #创建一个目录
+# os.rmdir('/home/zhbing/testdir')  #删除一个目录
+print(os.path.split('/home/zhbing/autoproxy.pac'))  #拆分路径，后一部分总是最后级别的目录或文件名
+print(os.path.splitext('/home/zhbing/autoproxy.pac'))   #os.path.splitext()得到文件扩展名
 
 
 
