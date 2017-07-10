@@ -132,9 +132,14 @@
 # from io import BytesIO
 # f=BytesIO(b'\xe4\xb8\xad\xe6\x96\x87')
 # print(f.read())
-
-
-
+################################################
+#操作文件和目录
+import os
+# print(os.name)
+# print(os.uname())   #获取系统信息
+# print(os.environ)   #环境变量
+# print(os.environ.get('HOME'))   #os.environ.get('key')获取某个环境变量的值
+print(os.path.abspath('.'))    # 查看当前目录的绝对路径
 
 
 
