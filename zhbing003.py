@@ -144,11 +144,22 @@ import os
 # print(os.path.join('/home/zhbing','testdir'))  #在某个目录下创建一个新目录，首先把新目录的完整路径表示出来:
 # os.mkdir('/home/zhbing/testdir')  #创建一个目录
 # os.rmdir('/home/zhbing/testdir')  #删除一个目录
-print(os.path.split('/home/zhbing/autoproxy.pac'))  #拆分路径，后一部分总是最后级别的目录或文件名
-print(os.path.splitext('/home/zhbing/autoproxy.pac'))   #os.path.splitext()得到文件扩展名
 
+# print(os.path.split('/home/zhbing/autoproxy.pac'))  #拆分路径，后一部分总是最后级别的目录或文件名
+# print(os.path.splitext('/home/zhbing/autoproxy.pac'))   #os.path.splitext()得到文件扩展名
 
+# os.rename('/home/zhbing/testdir/000.txt','/home/zhbing/testdir/0011.py')    #对文件重命名
+# os.remove('/home/zhbing/testdir/111.txt')    #删除文件
 
+# import shutil
+# print(shutil.copyfile('/home/zhbing/testdir/0011.py',
+#                       '/home/zhbing/testdir/0022.txt'))
+# print(shutil.copy('/home/zhbing/testdir/0022.txt','/home/zhbing'))
+# print(shutil.disk_usage('/home'))
 
-
+working_path='/home/zhbing'
+os.chdir(working_path)   #切换当前工作目录
+paths=os.listdir('.')
+print([x for x in paths if os.path.isdir(x)])  #列出当前目录下所有目录
+print([x for x in paths if os.path.isfile(x) and os.path.splitext(x)[1]=='.pac'])  #列出当前目录下所有pac文件
 
