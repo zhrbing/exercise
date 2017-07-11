@@ -134,7 +134,7 @@
 # print(f.read())
 ################################################
 #操作文件和目录
-import os
+# import os
 # print(os.name)
 # print(os.uname())   #获取系统信息
 # print(os.environ)   #环境变量
@@ -157,9 +157,25 @@ import os
 # print(shutil.copy('/home/zhbing/testdir/0022.txt','/home/zhbing'))
 # print(shutil.disk_usage('/home'))
 
-working_path='/home/zhbing'
-os.chdir(working_path)   #切换当前工作目录
-paths=os.listdir('.')
-print([x for x in paths if os.path.isdir(x)])  #列出当前目录下所有目录
-print([x for x in paths if os.path.isfile(x) and os.path.splitext(x)[1]=='.pac'])  #列出当前目录下所有pac文件
+# import os
+# working_path='/home/zhbing'
+# os.chdir(working_path)   #切换当前工作目录
+# paths=os.listdir('.')
+# print([x for x in paths if os.path.isdir(x)])  #列出当前目录下所有目录
+# print([x for x in paths if os.path.isfile(x) and os.path.splitext(x)[1]=='.pac'])  #列出当前目录下所有pac文件
 
+################################################
+#序列化
+# import pickle
+# d=dict(name='Bob',age=25,score=88)
+# print(pickle.dumps(d))  #pickle.dumps()方法把任意对象序列化成一个bytes
+#
+# f=open('dump.txt','wb')
+# pickle.dump(d,f)    #pickle.dump()直接把对象序列化后写入一个file-like Object
+# f.close()
+
+# f=open('dump.txt','rb')
+# d=pickle.load(f)
+# f.close()
+# print(d)
+################################################
