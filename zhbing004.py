@@ -50,38 +50,66 @@
 # r=subprocess.call(['nslookup','www.python.org'])
 # print('Exit code:',r)
 
-from multiprocessing import Process,Queue
-import os,time,random
-
-def write(q):
-    print('Process to write:%s' % os.getpid())
-    for value in ['A','B','C']:
-        print('Put %s to queue...' % value)
-        q.put(value)
-        time.sleep(random.random())
-
-def read(q):
-    print('Process to read:%s' % os.getpid())
-    while True:
-        value=q.get(True)
-        print('Get %s from queue.' % value)
-
-if __name__=='__main__':
-    q=Queue()
-    pw=Process(target=write,args=(q,))
-    pr=Process(target=read,args=(q,))
-    pw.start()
-    pr.start()
-    pw.join()
-    pr.terminate()
+# from multiprocessing import Process,Queue
+# import os,time,random
+#
+# def write(q):
+#     print('Process to write:%s' % os.getpid())
+#     for value in ['A','B','C']:
+#         print('Put %s to queue...' % value)
+#         q.put(value)
+#         time.sleep(random.random())
+#
+# def read(q):
+#     print('Process to read:%s' % os.getpid())
+#     while True:
+#         value=q.get(True)
+#         print('Get %s from queue.' % value)
+#
+# if __name__=='__main__':
+#     q=Queue()
+#     pw=Process(target=write,args=(q,))
+#     pr=Process(target=read,args=(q,))
+#     pw.start()
+#     pr.start()
+#     pw.join()
+#     pr.terminate()
 # #########################################################################################################
+#线程
+# import time,threading
+# def loop():
+#     print('thread %s is running...' % threading.current_thread().name)
+#     n=0
+#     while n<5:
+#         n+=1
+#         print('thread %s >>> %s' % (threading.current_thread().name,n))
+#         time.sleep(1)
+#     print('thread %s ended.' % threading.current_thread().name)
+#
+# print('thread %s is running...' % threading.current_thread().name)
+# t=threading.Thread(target=loop,name='LoopThread') #启动一个线程:传入一个函数并创建Thread实例，然后调用start()开始执行
+# t.start()
+# t.join()
+# print('thread %s ended.' % threading.current_thread().name)
+# #########################################################################################################
+#正则表达式
+import re
+# def user_match(user_print):
+#     if re.match(r'^\d{3}\-\d{3,8}$',user_print):
+#         print('Match success!')
+#     else:
+#         print('Not match!')
+#
+# user_print=input('请输入电话号码，格式：xxx-xxxxxx：')
+# user_match(user_print)
 
+# print(re.split(r'[\s\,]+','a b ,  c,d  e 1,2   3    4'))  #切分字符串
 
-
-
-
-
-
+# m=re.match(r'^(\d{3})-(\d{3,8})$',input('请输入电话号码，格式：xxx-xxxxxx：'))
+# print(m)
+# print(m.group(0))  #原始字符串
+# print(m.group(1))
+# print(m.group(2))
 
 
 
