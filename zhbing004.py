@@ -93,7 +93,7 @@
 # print('thread %s ended.' % threading.current_thread().name)
 # #########################################################################################################
 #正则表达式
-import re
+# import re
 # def user_match(user_print):
 #     if re.match(r'^\d{3}\-\d{3,8}$',user_print):
 #         print('Match success!')
@@ -118,6 +118,6 @@ import re
 # print(re.match(r'^(\d+)(0*)$','102300').groups())  #贪婪匹配,\d+直接把后面的0全部匹配了，结果0*只能匹配空字符串了
 # print(re.match(r'^(\d+?)(0*)$','102300').groups())  #加?:非贪婪匹配
 
-re_telephone=re.compile(r'^(\d{3})-(\d{3,8})$')  #编译
-print(re_telephone.match('010-12345').groups())
-print(re_telephone.match('010-8086').groups())
+# re_telephone=re.compile(r'^(\d{3})-(\d{3,8})$')  #编译
+# print(re_telephone.match('010-12345').groups())
+# print(re_telephone.match('010-8086').groups())
