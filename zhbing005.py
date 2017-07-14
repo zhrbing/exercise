@@ -54,6 +54,38 @@ from datetime import datetime,timedelta,timezone    #导入datetime模块的类
 
 ################################################################################
 #內建模块collections
+#namedtuple
+# from collections import namedtuple
+# Point=namedtuple('Point',['x','y']) # namedtuple('名称', [属性list])
+# p=Point(1,2)
+# print(p.x,p.y)
+# print(isinstance(p,Point),isinstance(p,tuple))
+
+#deque:高效实现插入和删除操作的双向列表，适合用于队列和栈
+# from collections import deque
+# q=deque(['a','b','c'])
+# q.append('x')
+# q.appendleft('y')
+# print(q)
+# q.popleft()
+# print(q)
+# q.pop()
+# print(q)
+
+#计数器Counter
+# from collections import Counter
+# cnt=Counter()
+# for ch in 'programming developing':
+#     cnt[ch]+=1
+#
+# print(cnt)
+################################################################################
+
+
+
+
+
+
 
 
 
