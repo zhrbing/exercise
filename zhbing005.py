@@ -100,6 +100,102 @@ md5=hashlib.md5()
 # sha1.update('how to use sha1 in python hashlib?'.encode('utf-8'))
 # print(sha1.hexdigest())
 ################################################################################
+#itertools
+import itertools
+# ns=itertools.repeat('ABC',8)  #第二个参数限定重复次数
+# for n in ns:
+#     print(n)
+
+# natuals=itertools.count(1)
+# ns=itertools.takewhile(lambda x:x<=10,natuals)
+# for n in ns:
+#     print(n)
+
+#串联迭代对象
+# for c in itertools.chain('ABC','XYZ'):
+#     print(c)
+
+#把迭代器中相邻的重复元素挑出来放在一起
+# for key,group in itertools.groupby('AAABBBCCAAA'):
+#     print(key,list(group))
+
+#忽略大小写分组
+# for key,group in itertools.groupby('AaaBBcCcAAa',lambda c:c.upper()):
+#     print(key,list(group))
+################################################################################
+#contextlib
+from contextlib import contextmanager
+
+# class Query(object):
+#
+#     def __init__(self,name):
+#         self.name=name
+#
+#     def query(self):
+#         print('Query info about %s...' % self.name)
+#
+# @contextmanager
+# def create_query(name):
+#     print('Begin')
+#     q=Query(name)
+#     yield q
+#     print('End')
+#
+# with create_query('Bob') as q:
+#     q.query()
+
+#在代码前后自动执行特定代码
+# @contextmanager
+# def tag(name):
+#     print('<%s>' % name)
+#     yield
+#     print('<%s>' % name)
+#
+# with tag('h1'):
+#     print('hello')
+#     print('world')
+
+# from contextlib import closing
+# from urllib.request import urlopen
+#
+# with closing(urlopen('https://www.baidu.com')) as page:
+#     for line in page:
+#         print(line)
+################################################################################
+#urllib
+
+# from urllib import request
+
+# url='https://api.douban.com/v2/book/2129650'
+# with request.urlopen(url) as f:
+#     data=f.read()
+#     print('Status:',f.status,f.reason)
+#     for k,v in f.getheaders():
+#         print('%s:%s' % (k,v))
+#     print('Data:',data.decode('utf-8'))
+
+# url='http://www.douban.com/'
+# add_header='Mozilla/6.0 (iPhone; CPU iPhone OS 8_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25'
+# req=request.Request(url)
+# req.add_header('User-Agent', add_header)
+# with request.urlopen(req) as f:
+#     print('Status:',f.status,f.reason)
+#     for k,v in f.getheaders():
+#         print('%s:%s' % (k,v))
+#     print('Data:',f.read().decode('utf-8'))
+################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
