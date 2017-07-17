@@ -165,7 +165,7 @@ from contextlib import contextmanager
 #urllib
 
 # from urllib import request
-
+#
 # url='https://api.douban.com/v2/book/2129650'
 # with request.urlopen(url) as f:
 #     data=f.read()
@@ -184,9 +184,14 @@ from contextlib import contextmanager
 #         print('%s:%s' % (k,v))
 #     print('Data:',f.read().decode('utf-8'))
 ################################################################################
+from PIL import Image
 
-
-
+# img=Image.open('capitan.jpg')  #type:Image.Image
+# w,h=img.size
+# print('Original image size:%sx%s' % (w,h))
+# img.thumbnail((w//10,h//10))
+# print('Resize image to:%sx%s' % (w//10,h//10))
+# img.save('thumbnail.jpg','jpeg')
 
 
 
