@@ -2,7 +2,7 @@
 # __author__ = 'zhbing'
 
 #內建模块--datetime
-from datetime import datetime,timedelta,timezone    #导入datetime模块的类
+# from datetime import datetime,timedelta,timezone    #导入datetime模块的类
 # now=datetime.now()        #获取当前datetime
 # print(now,'\t',type(now))
 
@@ -80,10 +80,26 @@ from datetime import datetime,timedelta,timezone    #导入datetime模块的类
 #
 # print(cnt)
 ################################################################################
+#hashlib
+import hashlib
 
+#md5生成结果是128bit，通常用32位16进制字符串表示
+md5=hashlib.md5()
 
+# md5.update('how to use md5 in python hashlib?'.encode('utf-8'))
+# md5.update('123456'.encode('utf-8'))
+# print(md5.hexdigest())
 
+#分块多次调用，计算结果一样
+# md5.update('how to use md5 in '.encode('utf-8'))
+# md5.update('python hashlib?'.encode('utf-8'))
+# print(md5.hexdigest())
 
+#sha1生成结果是160bit，通常用40位16进制字符串表示
+# sha1=hashlib.sha1()
+# sha1.update('how to use sha1 in python hashlib?'.encode('utf-8'))
+# print(sha1.hexdigest())
+################################################################################
 
 
 
