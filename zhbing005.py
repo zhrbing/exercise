@@ -84,6 +84,8 @@
 import hashlib
 
 #md5生成结果是128bit，通常用32位16进制字符串表示
+import random
+
 md5=hashlib.md5()
 
 # md5.update('how to use md5 in python hashlib?'.encode('utf-8'))
@@ -184,7 +186,7 @@ from contextlib import contextmanager
 #         print('%s:%s' % (k,v))
 #     print('Data:',f.read().decode('utf-8'))
 ################################################################################
-from PIL import Image,ImageFilter
+from PIL import Image, ImageFilter, ImageFont, ImageDraw
 
 # img=Image.open('capitan.jpg')  #type:Image.Image
 # w,h=img.size
@@ -194,13 +196,33 @@ from PIL import Image,ImageFilter
 # img.save('thumbnail.jpg','jpeg')
 
 # img=Image.open('thumbnail.jpg')  #type:Image.Image
-# im2=img.filter(ImageFilter.BLUR)
+# im2=img.filter(ImageFilter.BLUR) #模糊图片
 # im2.save('blur.jpg','jpeg')
 
-
-
-
-
+# def rndChar():      #随机字母
+#     return chr(random.randint(65,90))
+#
+# def rndColor():     #随机颜色
+#     return (random.randint(64,255),random.randint(64,255),random.randint(64,255))
+#
+# def rndColor2():    #随机颜色2
+#     return (random.randint(32,127),random.randint(32,127),random.randint(32,127))
+#
+# width=60*4
+# height=60
+# image=Image.new('RGB',(width,height),(255,255,255))
+# font=ImageFont.truetype('/usr/share/fonts/myfonts/inziu-TC-regular.ttc',36)
+# draw=ImageDraw.Draw(image)
+# for x in range(width):  # 填充每个像素:
+#     for y in range(height):
+#         draw.point((x,y),fill=rndColor())
+#
+# for t in range(4):  # 输出文字
+#     draw.text((60*t+10,10),rndChar(),font=font,fill=rndColor2())
+#
+# image=image.filter(ImageFilter.BLUR)
+# image.save('code.jpg','jpeg')
+################################################################################
 
 
 
