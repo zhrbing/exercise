@@ -184,7 +184,7 @@ from contextlib import contextmanager
 #         print('%s:%s' % (k,v))
 #     print('Data:',f.read().decode('utf-8'))
 ################################################################################
-from PIL import Image
+from PIL import Image,ImageFilter
 
 # img=Image.open('capitan.jpg')  #type:Image.Image
 # w,h=img.size
@@ -193,7 +193,9 @@ from PIL import Image
 # print('Resize image to:%sx%s' % (w//10,h//10))
 # img.save('thumbnail.jpg','jpeg')
 
-
+# img=Image.open('thumbnail.jpg')  #type:Image.Image
+# im2=img.filter(ImageFilter.BLUR)
+# im2.save('blur.jpg','jpeg')
 
 
 
