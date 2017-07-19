@@ -93,7 +93,7 @@
 # print('thread %s ended.' % threading.current_thread().name)
 # #########################################################################################################
 #正则表达式
-# import re
+import re
 # def user_match(user_print):
 #     if re.match(r'^\d{3}\-\d{3,8}$',user_print):
 #         print('Match success!')
@@ -121,3 +121,5 @@
 # re_telephone=re.compile(r'^(\d{3})-(\d{3,8})$')  #编译
 # print(re_telephone.match('010-12345').groups())
 # print(re_telephone.match('010-8086').groups())
+
+
