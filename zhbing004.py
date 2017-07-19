@@ -127,6 +127,7 @@ with open('file.txt','r',encoding='utf-8') as f:
     for line in f.readlines():
         # print(line.strip())
         m=re.sub('\D','',line.strip())   #提取字符串中的数字
+        # print(re.findall(r"\d+\.?\d*", string))
         print(m)
         sum+=int(m)
 
