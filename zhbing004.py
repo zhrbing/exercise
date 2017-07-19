@@ -121,5 +121,14 @@ import re
 # re_telephone=re.compile(r'^(\d{3})-(\d{3,8})$')  #编译
 # print(re_telephone.match('010-12345').groups())
 # print(re_telephone.match('010-8086').groups())
+# #########################################################################################################
+sum=0
+with open('file.txt','r',encoding='utf-8') as f:
+    for line in f.readlines():
+        # print(line.strip())
+        m=re.sub('\D','',line.strip())   #提取字符串中的数字
+        print(m)
+        sum+=int(m)
 
+print(sum)
 
