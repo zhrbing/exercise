@@ -224,8 +224,8 @@ from PIL import Image, ImageFilter, ImageFont, ImageDraw
 # image.save('code.jpg','jpeg')
 ################################################################################
 #GUI
-from tkinter import *
-import tkinter.messagebox as msgbox
+# from tkinter import *
+# import tkinter.messagebox as msgbox
 
 # class Application(Frame):
 #     def __init__(self,master=None):
@@ -262,7 +262,7 @@ import tkinter.messagebox as msgbox
 # app=Application()
 # app.master.title('Hello World')
 # app.mainloop()
-
+################################################################################
 
 
 
