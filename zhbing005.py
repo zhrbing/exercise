@@ -263,6 +263,37 @@ from PIL import Image, ImageFilter, ImageFont, ImageDraw
 # app.master.title('Hello World')
 # app.mainloop()
 ################################################################################
+#TCP编程——客户端
+# import socket
+# s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)  # 创建一个socket
+# s.connect(('www.sina.com.cn',80))       # 建立连接:
+# s.send(b'GET / HTTP/1.1\r\nHost: www.sina.com.cn\r\nConnection: close\r\n\r\n') # 发送数据
+#
+# # 接收数据
+# buffer=[]
+# while True:
+#     d=s.recv(1024)  # 每次最多接收1k字节
+#     if d:
+#         buffer.append(d)
+#     else:
+#         break
+# data=b''.join(buffer)
+# s.close()   # 关闭连接
+# header,html=data.split(b'\r\n\r\n',1)
+# print(header.decode('utf-8'))
+# with open('sina.html','wb') as f:   # 把接收的数据写入文件
+#     f.write(html)
+################################################################################
+
+
+
+
+
+
+
+
+
+
 
 
 
