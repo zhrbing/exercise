@@ -44,3 +44,56 @@
 # conn.commit()
 # cursor.close()
 ####################################################################################################
+import pymysql
+from sqlalchemy import Column,String,create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+
+Base=declarative_base()
+
+class User(Base):
+    __tablename__='person'
+
+    id=Column(String(10),primary_key=True)
+    name=Column(String(20))
+    phone_num=Column(String(11))
+
+engine=create_engine('mysql+pymysql://zhbing:123pwd@localhost:3306/zhbingdb?charset=utf8')
+DBsession=sessionmaker(bind=engine)
+
+session=DBsession()
+user=session.query(User).filter(User.id=='001').one()
+print(user)
+print('name:',user.name)
+print('phone:',user.phone_num)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
